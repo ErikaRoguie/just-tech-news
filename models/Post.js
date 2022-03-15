@@ -1,6 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../confiig/connections');
 
+// create associations
+User.hasMany(Post, {
+    foreignKey: 'user_id'
+  });
 //create our Post model
 class Post extends Model { }
 
